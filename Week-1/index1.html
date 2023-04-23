@@ -5,16 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      label {
+        margin-inline-end: 20px;
+        min-width: 100px;
+        display: inline-block;
+      }
+      #aboutYou {
+        min-width: 80%;
+        min-height: 50px;
+        display: inline-flex;
+      }
+    </style>
   </head>
   <body>
     <h1>Join a Social network</h1>
     <p><label for="">Full Name: </label><input type="text" /></p>
     <p><label for="">Email Address: </label><input type="email" /></p>
-    <p><label for="">About you: </label><input id="" /></p>
     <p>
-      <label for="">Photo: </label><input type="image" title="Choose file" />
-      No file chosen
+      <label for="">About you: </label><input id="aboutYou" maxlength="250px" />
     </p>
-    <div><input type="button" title="Submit" name="Submit" />Submit</div>
+    <p>
+      <label for="">Photo: </label><input type="file" title="Choose file" />
+    </p>
+    <input type="submit" value="Submit" />
   </body>
 </html>
