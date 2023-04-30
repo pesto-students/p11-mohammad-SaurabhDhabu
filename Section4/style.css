@@ -1,0 +1,35 @@
+nav {
+  display: inline-flex;
+}
+
+.navblock {
+  margin-right: 5px;
+  padding: 2px;
+  display: block;
+}
+
+.hotel-image {
+  height: 400px;
+  width: 400px;
+}
+
+.about-heading {
+  font: bold;
+  font-weight: bold;
+  font-size: larger;
+  margin-top: 10px;
+}
+
+.checked {
+  color: orange;
+}
+
+.contact-us-heading {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.map-embed {
+  width: 80%;
+  display: flex;
+}
