@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question and Answer</title>
+    <style>
+      body {
+        font-family: Calibri, sans-serif;
+        font-size: 3em;
+      }
+
+      #answer {
+        color: rgb(234, 6, 6);
+        width: 100px;
+        animation: translate 3s infinite;
+        /* Part of your solution goes here */
+      }
+
+      /* moveFraction goes here */
+
+      #question {
+        /* Part of your solution goes here */
+      }
+
+      #question:hover {
+        transform: scale(0.9);
+      }
+
+      @keyframes translate {
+        0% {
+          transform: translate(-2000px, 50px);
+          color: yellow;
+          /* Define the starting state of the animation */
+        }
+
+        65% {
+          transform: translate(0, 50px);
+          /* Define the starting state of the animation */
+        }
+
+        80% {
+          transform: translate(0, 0);
+          color: red;
+          /* Define the ending state of the animation */
+        }
+      }
+
+      span {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="question">Question: &frac14; + &frac12; =</span>
+    <span id="answer">&frac34;</span>
+  </body>
+</html>
