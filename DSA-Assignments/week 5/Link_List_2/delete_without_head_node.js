@@ -55,4 +55,5 @@ function DeleteWithoutHead(head, val) {
 var linkedListHead = CreateLinkedList("1 2 3 4 5 6 7 8");
 
 var head = DeleteWithoutHead(linkedListHead, 6);
+
 PrintLinkedList(head);
