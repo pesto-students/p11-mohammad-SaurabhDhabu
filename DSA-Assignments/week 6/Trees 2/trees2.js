@@ -72,4 +72,57 @@ var compareMirrorTrees = function (root1, root2) {
   }
 };
 
-// =====================
+// ===================== Level Order traversal =================
+
+function printLevelOrderTraversal(root) {
+  if (!root) {
+    return;
+  }
+
+  const queue = [];
+  queue.push(root);
+
+  while (queue.length > 0) {
+    const node = queue.shift();
+    console.log(node.val);
+
+    if (node.left) {
+      queue.push(node.left);
+    }
+    if (node.right) {
+      queue.push(node.right);
+    }
+  }
+}
+
+//==============  Root to Leaf Path Sum=================
+
+var hasPathSum = function (root, targetSum) {
+  if (root == null && targetSum == 0) {
+    return true;
+  }
+  return allSums(root, 0, targetSum);
+};
+
+var allSums = function (root, sumTillRoot, targetSum) {
+  if (root == null) {
+    return false;
+  }
+
+  sumTillRoot = sumTillRoot + root.val;
+
+  if (root.left == null && root.right == null) {
+    console.log(sumTillRoot);
+    if (targetSum == sumTillRoot) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  if (allSums(root.left, sumTillRoot, targetSum)) {
+    return true;
+  } else {
+    return allSums(root.right, sumTillRoot, targetSum);
+  }
+};
