@@ -128,6 +128,10 @@ var allSums = function (root, sumTillRoot, targetSum) {
 };
 
 // ================ Lowsest common ancestor ======================
+// https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree
+// Approach - get the path to p and q in two seperate lists
+// iterate over two from the root, when mismatch happens, root just previous
+// to that is our common ancestor
 
 var lowestCommonAncestor = function (root, p, q) {
   if (root == null) {
